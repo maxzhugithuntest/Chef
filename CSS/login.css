@@ -1,0 +1,78 @@
+body{
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    bisque 0%,
+    bisque 48%,
+    #DED0C0 48%,
+    #DED0C0 100%);
+    display :flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+
+/* 佈局 */
+.container{
+  display:flex; /*一開始需要在父層宣告為 flex 才有效*/
+}
+​
+.item-right{
+  flex:1; /*對應子層加上；1數值是內元件之間佔的比例*/
+  
+}
+​
+.item-left{
+  flex:1; /*對應子層加上*/
+  
+}
+
+
+fieldset{
+  border: 5px solid #F2B05C; 
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+button {
+  background-color: #864937;
+  color: #DED0C0;
+  border: 2px solid #864937;
+  border-radius: 10px;
+  height: 40px;
+  width: 60px;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #864937;
+  color: #462F2A;
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
+  font-size: 8px;
+  height: 40px;
+  width: 60px;
+  font-size: 15px;
+}
+
+/* 字型大小 */
+label{
+  font-size: 30px;
+  color: #864937
+}
+
+legend{
+  font-size: 40px;
+  font-weight: bold;
+  color: #462F2A;
+}
+
+/* input 樣式 */
+
+input{
+  background-color: transparent;
+  border-radius: 5px;
+  font-size: 18px;
+}

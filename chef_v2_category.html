@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <title>Categorty</title>
+    <link rel="stylesheet" href="./CSS/category.css">
+    
+</head>
+<body>
+
+    <!-- 選單 -->
+    <nav class="nav-box">
+      <input type="checkbox" id="menu">
+      <label for="menu" class="line">
+         <div class="menu"></div>
+      </label>
+  
+      <div class="menu-list">
+         <ul>
+             <li onclick="toWhatForToday()">今天吃什麼 ? </li>
+             <br>
+             <li onclick="toAbout()">關於</li>
+         </ul>
+    </div>
+  </nav>
+    <button class="tablink" onclick="openPage('Chinese', this, '#f2b15c6b')" id="defaultOpen">中式</button>
+    <button class="tablink" onclick="openPage('Japanese', this, '#F2B05C')">日式</button>
+    <button class="tablink" onclick="openPage('Korean', this, '#DED0C0')">韓式</button>
+    <button class="tablink" onclick="openPage('Western', this, '#C99873')">西式</button>
+
+    <div id="Chinese" class="tabcontent">
+    <div style = "display: inline-flex;flex-direction: row;flex-wrap: wrap;justify-content:space-around;">   
+    <div class="card" onclick="toChinesePage()">
+    <img src="./material/chinese_dish.jpg" alt="dish" style="width:100%;">
+            <div class="container" style="text-align: center;">
+            <h4><b> Click me ! </b></h4>  
+            </div>
+    </div>
+    <div style="width: auto; text-align: center; font-size: 50px; color:#864937;">
+      <br>
+      <h3>中式料理</h3>
+      <br>
+      <p>中式美味，濃郁又香氣四溢</p>
+    </div></div>
+    </div>
+
+    <div id="Japanese" class="tabcontent">
+      <div style = "display: inline-flex;flex-direction: row;flex-wrap: wrap;justify-content:space-around;">   
+        <div class="card" onclick="toJapanesePage()">
+        <img src="./material/japanese_dish.jpg" alt="dish" style="width:100%;">
+                <div class="container" style="text-align: center;">
+                <h4><b> Click me ! </b></h4>  
+                </div>
+                </div>
+        <div style="width: auto; text-align: center; font-size: 50px; color:#864937;">
+          <br>
+          <h3>日式料理</h3>
+          <br>
+          <p>日式美味，精緻又充滿驚喜</p>
+        </div></div>
+    </div>
+
+    <div id="Korean" class="tabcontent">
+      <div style = "display: inline-flex;flex-direction: row;flex-wrap: wrap;justify-content:space-around;">   
+        <div class="card" onclick="toKoreanPage()">
+        <img src="./material/korean_dish.jpg" alt="dish" style="width:100%;">
+                <div class="container" style="text-align: center;">
+                <h4><b> Click me ! </b></h4>  
+                </div>
+                </div>
+        <div style="width: auto; text-align: center; font-size: 50px; color:#864937;">
+          <br>
+          <h3>韓式料理</h3>
+          <br>
+          <p>韓式美味，辣爽又令人上癮</p>
+        </div></div>
+    </div>
+
+    <div id="Western" class="tabcontent">
+      <div style = "display: inline-flex;flex-direction: row;flex-wrap: wrap;justify-content:space-around;">   
+        <div class="card" onclick="toWesternPage()">
+        <img src="./material/western_dish.jpg" alt="dish" style="width:100%;">
+                <div class="container" style="text-align: center;">
+                <h4><b> Click me ! </b></h4>  
+                </div>
+                </div>
+        <div style="width: auto; text-align: center; font-size: 50px; color:#864937;">
+          <br>
+          <h3>西式點心</h3>
+          <br>
+          <p>西式點心，精緻又充滿創意</p>
+        </div></div>
+    </div>
+    
+    <script src="./JS/categorty.js"></script>
+    <script>
+        function toWhatForToday(){
+          location.href = "./chef_v2_randomgame.html"
+        }
+        function toAbout(){
+          location.href = "./chef_v2_about.html" 
+        }
+    </script>
+</body>

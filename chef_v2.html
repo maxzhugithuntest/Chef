@@ -2,24 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
     <title>Chef</title>
+    <link rel="stylesheet" href="./CSS/chef_v2.css">
+    
 </head>
 <body>
+    <!-- 選單 -->
+    <nav class="nav-box">
+        <input type="checkbox" id="menu">
+        <label for="menu" class="line">
+           <div class="menu"></div>
+        </label>
+        <div class="menu-list">
+           <ul>
+               <li onclick="toStart()">開始</li>
+               <br>
+               <li onclick="toWhatForToday()">今天吃什麼 ? </li>
+               <br>
+               <li onclick="toAbout()">關於</li>
+           </ul>
+      </div>
+    </nav>
     
-    <link rel="stylesheet" href="./CSS/chef_v2.css">
-    <div class = "button_div">
-    <button onclick = "loginClick()" id = "login" > Log in </button>
-    <button onclick = "startClick()" id = "start" > Start!</button>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img src="./material/chinese_dish_wel.jpg" style="width:100%">
     </div>
+  
+    <div class="mySlides fade">
+      <img src="./material/japanese_dish_wel.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="./material/korean_dish_wel.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./material/western_dish_wel.jpg" style="width:100%">
+    </div>
+  
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+    <p style="text-align: center; font-size: 100px;" id="content">
+      Choose what you like ! <br>
+      Enjoy what you want ! </p>
+     <!-- 按鈕 -->
+    <div class = "button_div">
+        <button onclick = "startClick()" id = "start" > Start ! </button>
+        <!-- <button onclick = "startClick()" id = "scroll" > Scroll ↓</button> -->
+    </div>
+    <!-- <div class = "button_fix">
+      <button onclick = "startClick()" id = "scroll" > Scroll ↓</button>
+    </div> -->
+  
+    <script src= "./JS/chef_v2.js "></script>
     <script>
-    function loginClick() {
-        location.href = "./chef_v2_login.html";
-    }
-    function startClick() {
-        location.href = "./chef_v2_login.html";
-    }
-        
+        function startClick() {
+            location.href = "./chef_v2_category.html";
+        }
+        function toStart(){
+          location.href = "#content";
+        }
+        function toWhatForToday(){
+          location.href = "./chef_v2_randomgame.html"
+        }
+        function toAbout(){
+          location.href = "./chef_v2_about.html" 
+        }
     </script>
+    
 </body>
 </html>

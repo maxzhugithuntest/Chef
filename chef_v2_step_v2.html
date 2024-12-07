@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <title>牛肉麵</title>
+    <link rel="stylesheet" href="./CSS/step.css">
+    
+</head>
+<body>
+    <div class="section" id = "page1"> 
+                    <div style="width: 100%; text-align: center; font-size: 50px; color:#864937;">
+                        <br>
+                        <h3>要準備的材料有:</h3>
+                        <br>
+                        <div style="text-align: center;display:inline-flex; width: 100%;justify-content:space-around;">
+                        <div class = "container">
+                        <p style="font-size: 30px;">
+                            原料:<br><br>
+                            牛腩1斤<br>
+                            蕃茄1顆<br>
+                            白蘿蔔1/2條<br>
+                            蔥2支<br>
+                            老薑數片<br>
+                            大蒜5粒<br>
+                            八角少許<br>
+                            高湯適量<br>
+                            拉麵適量<br>
+                            青菜適量<br>
+                            酸菜適量<br>
+                            蔥花</p>
+                        </div>
+                        <div class = "container">
+                            <p style="font-size: 30px;">
+                                調味料:<br><br>
+                                辣豆瓣醬3大匙<br>
+                                醬油1/2杯<br>
+                                冰糖少許<br>
+                                滷包1個<br>
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="button_div">
+                            <Button onclick="nextto2()">Next ! </Button>
+                        </div>
+                    </div>
+    <div class="section" id = "page2">
+        <div style="width: 100%; text-align: center; font-size: 50px; color:#864937;">
+            <br>
+            <h3>步驟1:</h3>
+            <br>
+            <div style="text-align: center;display:inline-flex; width: 100%;justify-content:space-around;">
+            <div class = "container">
+            <p style="font-size: 30px;">
+                先將牛腩、蕃茄、紅白蘿蔔切塊，蔥切段，大蒜拍碎備用</p>
+            </div>
+            </div>
+            </div>
+            <div class="button_div">
+                <Button onclick="nextto3()">Next ! </Button>
+            </div> 
+    </div>
+    <div class="section" id = "page3">
+        <div style="width: 100%; text-align: center; font-size: 50px; color:#864937;">
+            <br>
+            <h3>步驟2:</h3>
+            <br>
+            <div style="text-align: center;display:inline-flex; width: 100%;justify-content:space-around;">
+            <div class = "container">
+            <p style="font-size: 30px;">
+                煮一鍋熱水將牛腩汆燙過後，以水邊沖邊用手壓牛腩，將血水擠出一直到沒有血水出來，瀝乾置於一旁</p>
+            </div>
+            </div>
+            </div>
+            <div class="button_div">
+                <Button onclick="nextto4()">Next ! </Button>
+            </div> 
+    </div>
+    <div class="section" id = "page4">
+        <div style="width: 100%; text-align: center; font-size: 50px; color:#864937;">
+            <br>
+            <h3>步驟3:</h3>
+            <br>
+            <div style="text-align: center;display:inline-flex; width: 100%;justify-content:space-around;">
+            <div class = "container">
+            <p style="font-size: 30px;">
+                鍋內放入沙拉油，中火爆香薑蒜後加入牛腩不停拌炒，陸續加入辣豆瓣醬、醬油，使牛腩上色、辣味出現</p>
+            </div>
+            </div>
+            </div>
+            <div class="button_div">
+                <Button onclick="nextto5()">Next ! </Button>
+            </div> 
+    </div>
+    <div class="section" id = "page5">
+        <div style="width: 100%; text-align: center; font-size: 50px; color:#864937;">
+            <br>
+            <h3>步驟4:</h3>
+            <br>
+            <div style="text-align: center;display:inline-flex; width: 100%;justify-content:space-around;">
+            <div class = "container">
+            <p style="font-size: 30px;">
+                在鍋中加入高湯，以略為蓋過牛腩為準，並將蕃茄、紅白蘿蔔、八角、蔥、冰糖、滷包加入湯中，大火煮開撈除泡沫，轉小火煮至牛腩軟爛入味即為紅燒牛肉湯</p>
+            </div>
+            </div>
+            </div>
+            <div class="button_div">
+                <Button onclick="nextto6()">Next ! </Button>
+            </div> 
+    </div>
+    <div class="section" id = "page6">
+        <div style="width: 100%; text-align: center; font-size: 50px; color:#864937;">
+            <br>
+            <h3>步驟5:</h3>
+            <br>
+            <div style="text-align: center;display:inline-flex; width: 100%;justify-content:space-around;">
+            <div class = "container">
+            <p style="font-size: 30px;">
+                將麵條煮熟，倒入牛肉湯，加上蔥花、燙青菜、酸菜即可食用</p>
+            </div>
+            </div>
+            </div>
+            <div class="button_div">
+                <Button onclick="totop()">Top ! </Button>
+            </div> 
+    </div>
+    <script>
+        function nextto2(){
+           location.href = "#page2";
+        }
+        function nextto3(){
+           location.href = "#page3";
+        }
+        function nextto4(){
+           location.href = "#page4";
+        }
+        function nextto5(){
+           location.href = "#page5";
+        }
+        function nextto6(){
+           location.href = "#page6";
+        }
+        function totop(){
+           location.href = "#page1";
+        }
+    </script>
+
+</body>

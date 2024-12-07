@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../start.css">
+<title>韓式料理</title>
+    
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+</head>
+<body style = "overflow-x: hidden;">
+<!-- 選單 -->
+<nav class="nav-box">
+  <input type="checkbox" id="menu">
+  <label for="menu" class="line">
+     <div class="menu"></div>
+  </label>
+
+  <div class="menu-list">
+     <ul>
+         <li onclick="toStart()">回上頁</li>
+         <br>
+         <li onclick="toWhatForToday()">今天吃什麼 ? </li>
+         <br>
+         <li onclick="toAbout()">關於</li>
+     </ul>
+</div>
+</nav>
+<div style="text-align: center;width: 100%; line-height: 500px;">
+<h2 style="font-size: 80px; color:#864937;">韓式料理</h2>
+</div>
+<div style="line-height: 200px;text-align: center;width: 100%;">
+<button onclick="scrollPage()">Scroll ↓</button></div>
+<div class="flex-container" id = "allCards"style = "width:95%; padding:50px;" >
+    <div class="card" onclick="card1Click()">
+    <img src="./material/korean_dish.jpg" alt="dish" style="width:100%;">
+    <div class="container">
+        <h4><b>傳統石鍋拌飯</b></h4> 
+        <p>由多種食材製成，營養均衡</p> 
+    </div>
+    </div>
+    <div class="card" onclick="card2Click()">
+    <img src="./material/beef_bbq.jpg" alt="dish" style="width:100%">
+    <div class="container">
+        <h4><b>韓式烤牛肉</b></h4> 
+        <p>一口肉一口生菜，大口滿足</p> 
+    </div>
+    </div>
+    <div class="card" onclick="card3Click()">
+    <img src="./material/sea_food_cake.jpg" alt="dish" style="width:100%">
+    <div class="container">
+        <h4><b>韓式海鮮煎餅</b></h4> 
+        <p>料多味美，口感豐富</p> 
+    </div>
+    </div>
+    <div class="card" onclick="card4Click()">
+    <img src="./material/spicy_cake.jpg" alt="dish" style="width:100%">
+    <div class="container">
+        <h4><b>泡菜炒年糕</b></h4> 
+        <p>酸酸辣辣，開胃盛品</p> 
+    </div>
+    </div>
+    <div class="card" onclick="card5Click()">
+    <img src="./material/korean_hotpot.jpg" alt="dish" style="width:100%">
+    <div class="container">
+        <h4><b>韓式部隊鍋</b></h4> 
+        <p>料多豐盛，適合聚餐</p> 
+    </div>
+    </div>
+    
+</div>
+
+<script>
+    function scrollPage(){
+      location.href = "#allCards";
+    }
+    function card1Click(){
+      location.href = "./korean_rice.html";
+    }
+    function card2Click(){
+      location.href = "./beef_bbq.html";
+    }
+    function card3Click(){
+      location.href = "./sea_food_cake.html";
+    }
+    function card4Click(){
+      location.href = "./sea_food_sauce.html";
+    }
+    function card5Click(){
+      location.href = "./korean_hotpot.html";
+    }
+    function toWhatForToday(){
+          location.href = "../../chef_v2_randomgame.html"
+        }
+    function toAbout(){
+          location.href = "../../chef_v2_about.html" 
+        }
+    function toStart(){
+        location.href = "../../chef_v2_category.html"
+    }
+</script>
+<style>
+    body{
+      background-color: #DED0C0;
+    }
+
+    .flex-container {
+     display: inline-flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+
+    }
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 30%;
+      border-radius: 5px;
+    }
+    
+    .card:hover {
+      box-shadow: 0 32px 64px 0 rgba(0,0,0,0.2);
+      width: 33%;
+    }
+    
+    img {
+      border-radius: 5px 5px 0 0;
+    }
+    
+    .container {
+      padding: 2px 16px;
+      background-color:white;
+      border-radius: 0px 0px 5px 5px;
+      background-color:whitesmoke;
+      color: #864937;
+    }
+
+       /*
+選單線
+*/
+.line {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  padding: 16px;
+  position: fixed;
+  z-index: 2;
+}
+.line .menu,
+.line .menu::before,
+.line .menu::after {
+  background: #222;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  transition: background ease .3s, top ease .3s .3s, transform ease .3s;
+  width: 20px;
+}
+.line .menu {
+  left: 18px;
+  top: -30px;
+}
+
+.line .menu::before {
+  top: -6px;
+}
+
+.line .menu::after {
+  top: 6px;
+}
+/*
+點選選單變叉叉
+*/
+#menu:checked + .line .menu {
+  background: transparent;
+}
+
+#menu:checked + .line .menu::before {
+  transform: rotate(45deg);
+}
+
+#menu:checked + .line .menu::after {
+  transform: rotate(-45deg);
+}
+
+#menu:checked + .line .menu::before,
+#menu:checked + .line .menu::after {
+  top: 0;
+  transition: top ease .3s, transform ease .3s .3s;
+}
+
+/*
+選單開合
+*/
+#menu:checked ~ .menu-list {
+  width: 300px;
+}
+
+.menu-list {
+  width: 60px;
+  height: 100vh;
+  background: transparent;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, .1); */
+  padding-top: 60px;
+  position: fixed;
+  z-index: 1;
+  transition: all .6s;
+  overflow: hidden;
+}
+/*
+選單向外推
+*/
+.menu-list ul {
+  list-style: none;
+  margin-left:70px;
+  padding: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
+  background: whitesmoke;
+  border-radius: 5px;
+}
+.menu-list ul>li{
+  display:block;
+  width:300px;
+  font-size:30px;
+  color: #864937;
+}
+.menu-list ul>li:hover{
+  background-color: #DED0C0;
+  border-radius: 5px;
+  width: auto;
+}
+/*
+隱藏核許框
+*/
+input#menu {
+display: none;
+}
+    </style>
+</body>
+</html> 

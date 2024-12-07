@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <title>傳統石鍋拌飯</title>
+    <link rel="stylesheet" href="../step.css">
+    
+</head>
+<body>
+    <div class="section" id = "page1"> 
+                    <div style="width: 100%; text-align: center; font-size: 50px; color:#864937;">
+                        <br>
+                        <h3>要準備的材料有:</h3>
+                        <br>
+                        <div style="text-align: center;display:inline-flex; width: 100%;justify-content:space-around;">
+                        <div class = "container">
+                        <p style="font-size: 30px;">
+                            原料:<br><br>
+                            紅蘿蔔絲拌菜40公克<br>
+                            黃豆芽拌菜45公克<br>
+                            芝麻拌海苔35公克<br>
+                            辣醬小黃瓜40公克<br>
+                            柳松菇拌菜40公克<br>
+                            雞蛋1顆<br>
+                            白飯適量<br>
+                            </p>
+                        </div>
+                        <div class = "container">
+                            <p style="font-size: 30px;">
+                                調味料:<br><br>
+                                韓式辣醬1中匙<br>
+                                黑麻油適量<br>
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="button_div">
+                            <Button onclick="nextto2()">Next ! </Button>
+                        </div>
+                    </div>
+    <div class="section" id = "page2">
+        <div style="width: 100%; text-align: center; font-size: 50px; color:#864937;">
+            <br>
+            <h3>步驟1:</h3>
+            <br>
+            <div style="text-align: center;display:inline-flex; width: 100%;justify-content:space-around;">
+            <div class = "container">
+            <p style="font-size: 30px;">
+                取一石鍋碗放在爐台上燒熱約10分鐘，待石鍋碗變熱後，再於石鍋碗內塗抹上一層黑麻油</p>
+            </div>
+            </div>
+            </div>
+            <div class="button_div">
+                <Button onclick="nextto3()">Next ! </Button>
+            </div> 
+    </div>
+    <div class="section" id = "page3">
+        <div style="width: 100%; text-align: center; font-size: 50px; color:#864937;">
+            <br>
+            <h3>步驟2:</h3>
+            <br>
+            <div style="text-align: center;display:inline-flex; width: 100%;justify-content:space-around;">
+            <div class = "container">
+            <p style="font-size: 30px;">
+                將白飯盛入作法1的石鍋碗內後，依序放入黃豆芽拌菜、芝麻拌海帶、紅蘿蔔絲拌菜、辣醬小黃瓜、柳松菇拌菜。然後再放入韓式辣醬於所有小菜的中間</p>
+            </div>
+            </div>
+            </div>
+            <div class="button_div">
+                <Button onclick="nextto4()">Next ! </Button>
+            </div> 
+    </div>
+    <div class="section" id = "page4">
+        <div style="width: 100%; text-align: center; font-size: 50px; color:#864937;">
+            <br>
+            <h3>步驟3:</h3>
+            <br>
+            <div style="text-align: center;display:inline-flex; width: 100%;justify-content:space-around;">
+            <div class = "container">
+            <p style="font-size: 30px;">
+                最後在作法2的材料中間處，放上一個至半生熟的煎蛋即可</p>
+            </div>
+            </div>
+            </div>
+            <div class="button_div">
+                <Button onclick="totop()">Top ! </Button>
+            </div> 
+    </div>
+    <script>
+        function nextto2(){
+           location.href = "#page2";
+        }
+        function nextto3(){
+           location.href = "#page3";
+        }
+        function nextto4(){
+           location.href = "#page4";
+        }
+        function totop(){
+           location.href = "#page1";
+        }
+    </script>
+
+</body>
